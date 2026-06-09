@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard Nilai</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <div class="container mt-4">
+
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body d-flex align-items-center gap-3">
+                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSphzdpHqsyy57dIe57czn7Y5no-zVARwyfIgKkgYDLm-EA0ZeiD0r7kMBi1HTBZYH1ZaIbUwje" class="rounded-circle img-fluid" style="width: 80px;">
+                <div>
+                    <h5 class="mb-0">Ariq Muhammad</h5>
+                    <span class="badge bg-success">Mahasiswa Aktif</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <h5>Total SKS</h5>
+                        <h3>20</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <h5>IPK</h5>
+                        <h3>3.75</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <h5>Lulus</h5>
+                        <h3>10 MK</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="mb-3">Daftar Nilai</h5>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>No</th>
+                                <th>Mata Kuliah</th>
+                                <th>SKS</th>
+                                <th>Nilai Huruf</th>
+                                <th>Nilai Angka</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Pemrograman Web</td>
+                                <td>3</td>
+                                <td><span class="badge bg-success">A</span></td>
+                                <td>4.0</td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#detailModal"
+                                        onclick="showDetail('Pemrograman Web','A','4.0','Mempelajari HTML, CSS, JS')">
+                                        Detail
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>Basis Data</td>
+                                <td>3</td>
+                                <td><span class="badge bg-primary">B</span></td>
+                                <td>3.0</td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#detailModal"
+                                        onclick="showDetail('Basis Data','B','3.0','Belajar SQL dan database')">
+                                        Detail
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>Statistika</td>
+                                <td>2</td>
+                                <td><span class="badge bg-warning text-dark">C</span></td>
+                                <td>2.0</td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#detailModal"
+                                        onclick="showDetail('Statistika','C','2.0','Dasar statistika')">
+                                        Detail
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>4</td>
+                                <td>Algoritma dan Struktur Data</td>
+                                <td>3</td>
+                                <td><span class="badge bg-danger">D</span></td>
+                                <td>1.0</td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#detailModal"
+                                        onclick="showDetail('Algoritma dan Struktur Data','D','1.0','Logika dan problem solving')">
+                                        Detail
+                                    </button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="detailModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Detail Mata Kuliah</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <p><strong>Nama:</strong> <span id="mk"></span></p>
+                    <p><strong>Nilai Huruf:</strong> <span id="nh"></span></p>
+                    <p><strong>Nilai Angka:</strong> <span id="na"></span></p>
+                    <p><strong>Deskripsi:</strong> <span id="desc"></span></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showDetail(mk, nh, na, desc) {
+            document.getElementById("mk").innerText = mk;
+            document.getElementById("nh").innerText = nh;
+            document.getElementById("na").innerText = na;
+            document.getElementById("desc").innerText = desc;
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
