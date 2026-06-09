@@ -1,0 +1,1 @@
+console.log("Output dari External JavaScript");

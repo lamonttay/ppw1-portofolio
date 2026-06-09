@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Tugas 1</title>
+
+    <script>
+        console.log("Output dari Embed JavaScript");
+        alert("Halo dari Embed JavaScript");
+    </script>
+</head>
+<body>
+
+    <h1>Latihan JavaScript</h1>
+
+    <button onclick="alert('Halo dari ini saya menggunakan Inline JavaScript')">
+        Klik MEEE
+    </button>
+
+    <br><br>
+
+    <div id="hasil"></div>
+
+    <script>
+        document.write("<p>Output menggunakan document.write()</p>");
+
+        document.getElementById("hasil").innerHTML =
+            "<b>Output menggunakan innerHTML</b>";
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
