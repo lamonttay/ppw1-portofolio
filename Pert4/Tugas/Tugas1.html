@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contoh Form</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Data Mahasiswa</legend>
+            <label>Nama:</label>
+            <input type="text" name="nama"><br><br>
+            <label>Jurusan:</label>
+            <select>
+                <optgroup label="Teknologi">
+                    <option>Teknologi Rekayasa Perangkat Lunak</option>
+                    <option>Sistem Informasi</option>
+                    <option>Teknologi Informasi</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <br>
+        <label>Pilih Ruang Ujian:</label>
+        <input list="ruang_ujian">
+        <datalist id="ruang_ujian">
+            <option value="CU 206">
+            <option value="hu 207">
+        </datalist>
+        <br><br>
+        <label>Kursi Tersedia:</label>
+        <output name="hasil">0</output>
+    </form>
+</body>
+</html>
+
+
