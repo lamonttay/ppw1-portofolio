@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Portofolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        color: #374151;
+    }
+
+    /* ---- HERO SECTION ---- */
+    .hero-section {
+        min-height: 85vh;
+        display: flex;
+        align-items: center;
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    .hero-photo {
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .hero-photo:hover {
+        transform: scale(1.03);
+        box-shadow: 0 20px 60px rgba(56, 189, 248, 0.35) !important;
+    }
+
+    /* ---- PROJECT CARD ---- */
+    .project-card {
+        border-radius: 12px !important;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 32px rgba(26, 86, 219, 0.15) !important;
+    }
+
+    .project-card .card-img-top {
+        transition: transform 0.4s ease;
+    }
+
+    .project-card:hover .card-img-top {
+        transform: scale(1.05);
+    }
+
+    /* ---- ABOUT ---- */
+    .about-photo:hover {
+        transform: scale(1.02);
+    }
+
+    /* ---- DIVIDER ---- */
+    .divider-line {
+        margin-top: 12px;
+        margin-bottom: 0;
+    }
+
+    /* ---- SOCIAL ---- */
+    .social-link {
+        transition: color 0.2s ease;
+    }
+
+    .social-link:hover {
+        color: #38BDF8 !important;
+    }
+
+    /* ---- NAVBAR ---- */
+    .navbar-nav .nav-link {
+        transition: color 0.2s ease;
+        border-radius: 6px;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+        color: #38BDF8 !important;
+        background-color: rgba(56, 189, 248, 0.08);
+    }
+
+    /* ---- ANIMATION ---- */
+    @keyframes rotate-ring {
+        from {
+            transform: scale(1.1) rotate(0deg);
+        }
+        to {
+            transform: scale(1.1) rotate(360deg);
+        }
+    }
+
+    .rotating-ring {
+        animation: rotate-ring 10s linear infinite;
+    }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 576px) {
+        .hero-section .display-4 {
+            font-size: 2rem;
+        }
+
+        section {
+            padding-top: 3rem !important;
+            padding-bottom: 3rem !important;
+        }
+
+        .hero-photo {
+            width: 200px !important;
+            height: 200px !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero-section {
+            min-height: auto;
+        }
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #1E293B;">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold fs-4" href="#">
+                <span style="color: #38BDF8;">&lt;</span>My<span style="color: #38BDF8;">.</span>PortoWeb<span
+                    style="color: #38BDF8;">/&gt;</span>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto gap-1">
+                    <li class="nav-item"><a class="nav-link active px-3" href="#beranda">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#tentang">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#proyek">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#kontak">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="beranda" class="py-5 hero-section"
+        style="background: linear-gradient(135deg, #1A56DB 0%, #0F172A 100%);">
+        <div class="container">
+            <div class="row align-items-center g-5 min-vh-section">
+
+                <div class="col-12 col-lg-7 text-white order-2 order-lg-1">
+
+                    <h1 class="display-4 fw-bold mb-3">
+                        Hello, I'm <span style="color:#38BDF8;">Ariq Muhammad</span>
+                    </h1>
+                    <p class="fs-5 fw-semibold mb-2" style="color:#93C5FD;">
+                        Frontend Developer &amp; UI Designer
+                    </p>
+                    <p class="mb-4" style="color:#CBD5E1; line-height:1.8;">
+                        I'm passionate about building beautiful, responsive, and easy-to-use web interfaces. I
+                        specialize in HTML, CSS, JavaScript, and Bootstrap 5.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <span class="badge rounded-pill border"
+                            style="color:#38BDF8; border-color:#38BDF8!important;">HTML5</span>
+                        <span class="badge rounded-pill border"
+                            style="color:#38BDF8; border-color:#38BDF8!important;">CSS</span>
+                        <span class="badge rounded-pill border"
+                            style="color:#38BDF8; border-color:#38BDF8!important;">Bootstrap 5</span>
+                        <span class="badge rounded-pill border"
+                            style="color:#38BDF8; border-color:#38BDF8!important;">Figma</span>
+                    </div>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#proyek" class="btn btn-lg fw-semibold"
+                            style="background-color:#38BDF8; color:#0F172A;">
+                            <i class="bi bi-folder2-open me-2"></i>Projects
+                        </a>
+                        <a href="#kontak" class="btn btn-lg btn-outline-light">
+                            <i class="bi bi-send me-2"></i>Contact Me
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-5 text-center order-1 order-lg-2">
+                    <div class="hero-photo-wrapper d-inline-block position-relative">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9vYFRtXDpUpkdJzDiget7OynGGqRxp-Gm3Q&s"
+                            class="rounded-circle border border-4 shadow-lg hero-photo"
+                            style="border-color:#38BDF8!important; width:280px; height:280px; object-fit:cover;"
+                            alt="Foto Profil">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 rounded-circle rotating-ring"
+                            style="border:2px dashed rgba(56,189,248,0.4); transform:scale(1.1);"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="tentang" class="py-5 bg-white">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold" style="color:#1E293B;">About Me</h2>
+                <div class="divider-line mx-auto"
+                    style="width:60px; height:4px; background:#38BDF8; border-radius:2px;"></div>
+            </div>
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-12 col-md-5 text-center">
+                    <div class="position-relative d-inline-block">
+                        <img src="https://via.placeholder.com/320x380/1E293B/38BDF8?text=Foto+Profil"
+                            class="rounded-4 shadow-lg about-photo"
+                            style="width:100%; max-width:320px; height:380px; object-fit:cover;" alt="Foto Tentang">
+
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-7">
+                    <h3 class="fw-bold mb-3" style="color:#1E293B;">
+                        Genuinely Passionate About Building Web
+                    </h3>
+                    <p class="text-muted mb-3" style="line-height:1.8;">
+                        I am a Software Engineering student with a strong interest in web development,
+                        particularly the front-end. I believe that a good interface is not just about aesthetics,
+                        but also about ease of use and accessibility.
+                    </p>
+                    <p class="text-muted mb-4" style="line-height:1.8;">
+                        I am currently actively developing my personal project portfolio while
+                        continuously learning the latest web technologies.
+                    </p>
+
+
+
+                    <a href="#kontak" class="btn mt-3 fw-semibold" style="background-color:#1A56DB; color:white;">
+                        <i class="bi bi-download me-2"></i>Download CV
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="proyek" class="py-5" style="background-color:#F8FAFC;">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold" style="color:#1E293B;">Newest Projects</h2>
+                <p class="text-muted fs-5">Some projects I have worked on</p>
+                <div class="divider-line mx-auto"
+                    style="width:60px; height:4px; background:#38BDF8; border-radius:2px;"></div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm project-card">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://via.placeholder.com/400x200/0F172A/38BDF8?text=Project+1"
+                                class="card-img-top" style="height:200px; object-fit:cover;" alt="Project 1">
+                            <div class="card-img-overlay d-flex align-items-start justify-content-end p-2">
+                                <span class="badge bg-success">UI Design</span>
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column p-4">
+                            <h5 class="card-title fw-bold" style="color:#1E293B;">E-Commerce Redesign</h5>
+                            <p class="card-text text-muted flex-grow-1">
+                                Redesign project for an e-commerce website to improve user experience and conversion
+                                rates.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2 mb-3 mt-2">
+                                <span class="badge rounded-pill bg-light text-dark border">Figma</span>
+                                <span class="badge rounded-pill bg-light text-dark border">Bootstrap</span>
+                                <span class="badge rounded-pill bg-light text-dark border">UX</span>
+                            </div>
+                            <div class="d-flex gap-2 mt-auto">
+                                <a href="#" class="btn btn-sm fw-semibold flex-fill"
+                                    style="background-color:#1A56DB; color:white;">
+                                    <i class="bi bi-eye me-1"></i>Demo
+                                </a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary flex-fill">
+                                    <i class="bi bi-github me-1"></i>Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm project-card">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://via.placeholder.com/400x200/1A56DB/F8FAFC?text=Project+2"
+                                class="card-img-top" style="height:200px; object-fit:cover;" alt="Project 2">
+                            <div class="card-img-overlay d-flex align-items-start justify-content-end p-2">
+                                <span class="badge" style="background-color:#38BDF8; color:#0F172A;">Landing Page</span>
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column p-4">
+                            <h5 class="card-title fw-bold" style="color:#1E293B;">Landing Page Startup</h5>
+                            <p class="card-text text-muted flex-grow-1">
+                                Modern landing page for a technology startup with CSS animations,
+                                feature sections, testimonials, and an integrated contact form.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2 mb-3 mt-2">
+                                <span class="badge rounded-pill bg-light text-dark border">Bootstrap</span>
+                                <span class="badge rounded-pill bg-light text-dark border">CSS Anim</span>
+                                <span class="badge rounded-pill bg-light text-dark border">HTML</span>
+                            </div>
+                            <div class="d-flex gap-2 mt-auto">
+                                <a href="#" class="btn btn-sm fw-semibold flex-fill"
+                                    style="background-color:#1A56DB; color:white;">
+                                    <i class="bi bi-eye me-1"></i>Demo
+                                </a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary flex-fill">
+                                    <i class="bi bi-github me-1"></i>Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm project-card">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://via.placeholder.com/400x200/0F172A/FFFFFF?text=Project+3"
+                                class="card-img-top" style="height:200px; object-fit:cover;" alt="Project 3">
+                            <div class="card-img-overlay d-flex align-items-start justify-content-end p-2">
+                                <span class="badge bg-info text-dark">API</span>
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column p-4">
+                            <h5 class="card-title fw-bold" style="color:#1E293B;">City Weather App</h5>
+                            <p class="card-text text-muted flex-grow-1">
+                                Weather information app that fetches data from the OpenWeatherMap API
+                                and displays it in a clean and intuitive interface.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2 mb-3 mt-2">
+                                <span class="badge rounded-pill bg-light text-dark border">Fetch API</span>
+                                <span class="badge rounded-pill bg-light text-dark border">JSON</span>
+                                <span class="badge rounded-pill bg-light text-dark border">JS</span>
+                            </div>
+                            <div class="d-flex gap-2 mt-auto">
+                                <a href="#" class="btn btn-sm fw-semibold flex-fill"
+                                    style="background-color:#1A56DB; color:white;">
+                                    <i class="bi bi-eye me-1"></i>Demo
+                                </a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary flex-fill">
+                                    <i class="bi bi-github me-1"></i>Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" class="py-5 bg-white">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold" style="color:#1E293B;">Contact Me</h2>
+                <div class="divider-line mx-auto"
+                    style="width:60px; height:4px; background:#38BDF8; border-radius:2px;"></div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <div class="row g-4 text-center">
+
+                        <div class="col-12 col-md-4">
+                            <div class="d-flex flex-column align-items-center p-3">
+                                <div class="mb-3 rounded-circle d-flex align-items-center justify-content-center"
+                                    style="width:64px; height:64px; background:#EFF6FF;">
+                                    <i class="bi bi-envelope-fill" style="color:#1A56DB; font-size:1.5rem;"></i>
+                                </div>
+                                <h5 class="fw-bold" style="color:#1E293B;">Email</h5>
+                                <p class="text-muted">ariqmuhammad@examplemail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <div class="d-flex flex-column align-items-center p-3">
+                                <div class="mb-3 rounded-circle d-flex align-items-center justify-content-center"
+                                    style="width:64px; height:64px; background:#EFF6FF;">
+                                    <i class="bi bi-telephone-fill" style="color:#1A56DB; font-size:1.5rem;"></i>
+                                </div>
+                                <h5 class="fw-bold" style="color:#1E293B;">Phone</h5>
+                                <p class="text-muted">+62 812-3456-7890</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <div class="d-flex flex-column align-items-center p-3">
+                                <div class="mb-3 rounded-circle d-flex align-items-center justify-content-center"
+                                    style="width:64px; height:64px; background:#EFF6FF;">
+                                    <i class="bi bi-geo-alt-fill" style="color:#1A56DB; font-size:1.5rem;"></i>
+                                </div>
+                                <h5 class="fw-bold" style="color:#1E293B;">Location</h5>
+                                <p class="text-muted">Jakarta, Indonesia</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="py-4" style="background-color: #1E293B;">
+        <div class="container">
+            <div class="row align-items-center gy-3">
+                <div class="col-12 col-md-6 text-center text-md-start">
+                    <p class="mb-0" style="color:#94A3B8;">
+                        &copy; 2025 <strong style="color:#38BDF8;">Ariq Muhammad</strong>. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 text-center text-md-end">
+                    <a href="#" class="me-3 text-decoration-none social-link" style="color:#94A3B8;">
+                        <i class="bi bi-github me-1"></i>GitHub
+                    </a>
+                    <a href="#" class="me-3 text-decoration-none social-link" style="color:#94A3B8;">
+                        <i class="bi bi-linkedin me-1"></i>LinkedIn
+                    </a>
+                    <a href="#" class="text-decoration-none social-link" style="color:#94A3B8;">
+                        <i class="bi bi-instagram me-1"></i>Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
